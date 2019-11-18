@@ -2,16 +2,16 @@
 class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://bigstep.com/"
-  version "1.0.1"
+  version "1.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bigstepinc/metalcloud-cli/releases/download/v1.0.1/metalcloud-cli_1.0.1_Darwin_x86_64.tar.gz"
-    sha256 "f31a009702bfed6ada4426fd9d42f8f7ccd0518b9daedc5a46e5a76fa8941ac0"
+    url "https://github.com/bigstepinc/metalcloud-cli/releases/download/v1.0.2/metalcloud-cli_1.0.2_Darwin_x86_64.tar.gz"
+    sha256 "52811db0743a3912eea290dfe24eb96dcca253260f9461a0dc80670ad1414482"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/bigstepinc/metalcloud-cli/releases/download/v1.0.1/metalcloud-cli_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "40c167f40d0e0e836841f8417af1dc41ed8873d05e028d71c62b536708a5d189"
+      url "https://github.com/bigstepinc/metalcloud-cli/releases/download/v1.0.2/metalcloud-cli_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "443499782c959c16212850ff647177a78e99c306b47af3370150ba9fef6d00b8"
     end
   end
 
@@ -20,7 +20,7 @@ class MetalcloudCli < Formula
   end
 
   def caveats; <<~EOS
-    metalcloud-cli --help
+    metalcloud-cli help
   EOS
   end
 end
