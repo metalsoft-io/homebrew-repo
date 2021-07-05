@@ -2,16 +2,16 @@
 class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://bigstep.com/"
-  version "2.2.6"
+  version "2.2.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.6/metalcloud-cli_2.2.6_Darwin_x86_64.tar.gz"
-    sha256 "290d60250c5e7100ade035b6b80703dd377b5aa208656b8ad7258cf57e52662e"
+    url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.7/metalcloud-cli_2.2.7_Darwin_x86_64.tar.gz"
+    sha256 "1b862ac737e94f789abdf2b43353a881a333c837633f8313e9608537e0bce771"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.6/metalcloud-cli_2.2.6_Linux_x86_64.tar.gz"
-    sha256 "d0576ad6ebd985743ab6c8e781f2c00ea63e2520f0f08675cd24095096fe0329"
+    url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.7/metalcloud-cli_2.2.7_Linux_x86_64.tar.gz"
+    sha256 "2032b4f3d8713bb3a4d8f1adba5334d6ff886c9fea20102bc55f0ff184c009c5"
   end
 
   def install
