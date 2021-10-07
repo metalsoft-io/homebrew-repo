@@ -5,28 +5,28 @@
 class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://metalsoft.io/"
-  version "2.2.19"
+  version "2.2.22"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.19/metalcloud-cli_2.2.19_Darwin_arm64.tar.gz"
-      sha256 "04fc183c29e2fbc7e602c7c70e150b226936afb714f3479a8bef79c8686056bc"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.22/metalcloud-cli_2.2.22_Darwin_arm64.tar.gz"
+      sha256 "8999a923013f4b62b69f6bc3d2053af55f4af81a1a3d77019f3606e3163ae8af"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.19/metalcloud-cli_2.2.19_Darwin_x86_64.tar.gz"
-      sha256 "e6f93c6bdabb1198c8efd4b24869f4f9c98856325bdbace0a813bd5e6061ad7e"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.22/metalcloud-cli_2.2.22_Darwin_x86_64.tar.gz"
+      sha256 "94743b9a15b3d3b7ad599532f7e9af3218dd2dd99711c1ba246e3f221a0dd3e8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.19/metalcloud-cli_2.2.19_Linux_arm64.tar.gz"
-      sha256 "af07d9c047ce35d6a9f44a197a80e6b368eac41d3234ca9bf8b9036e888a8fce"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.22/metalcloud-cli_2.2.22_Linux_arm64.tar.gz"
+      sha256 "cc9be6a71b8f468196f3f9734f34dc01941a467ae6c7d5af46b441854ed10dc3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.19/metalcloud-cli_2.2.19_Linux_x86_64.tar.gz"
-      sha256 "fe4056d0abbca8a1c56e01570a209714fa40c990cb97982d8e6df87b8e002df9"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.22/metalcloud-cli_2.2.22_Linux_x86_64.tar.gz"
+      sha256 "8ff743cea12c1a0c3324cab2e5b086ed4506a0479f95293ed6fe4d4b73d077f2"
     end
   end
 
