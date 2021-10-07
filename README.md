@@ -1,7 +1,7 @@
 # MetalSoft Homebrew Repo
 
 ## How do I install these formulae?
-`brew install bigstepinc/repo/<formula>`
+`brew install metalsoft-io/repo/<formula>`
 
 Or `brew tap metalsoft-io/repo` and then `brew install <formula>`.
 
