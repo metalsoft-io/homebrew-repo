@@ -5,28 +5,28 @@
 class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://metalsoft.io/"
-  version "2.2.24"
+  version "2.2.25"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.24/metalcloud-cli_2.2.24_Darwin_x86_64.tar.gz"
-      sha256 "d2120c61a31a6b9c73157bb34c2989b9d88efe5d2a522478f8539bc77747b18c"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Darwin_x86_64.tar.gz"
+      sha256 "1709105cd76caec66877a05d047d888ff8c7abdf0a6d1b704a45aa8a950b42c0"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.24/metalcloud-cli_2.2.24_Darwin_arm64.tar.gz"
-      sha256 "51dbcfd1fb7fcadf44bde637a0c672e0954cbff6a9b9c945ee9fe94c95ea70cc"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Darwin_arm64.tar.gz"
+      sha256 "a6dcc29380daf94564cb4709a0e48c86c512110e088b13e48a0d9b81d72ba757"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.24/metalcloud-cli_2.2.24_Linux_x86_64.tar.gz"
-      sha256 "dfe8aedb48d63c5bfcc0e92f2c8705e06ce4d5825e3df54506ce5bec31dbdd1d"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.24/metalcloud-cli_2.2.24_Linux_arm64.tar.gz"
-      sha256 "37e7c591e730fede623dd05645da60a0555c942dee0a16c58804e49780e0b730"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Linux_arm64.tar.gz"
+      sha256 "3502ea019cedff4170a7abc0eb58f386468f0729e7d6d97800563a3efcf5ee25"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Linux_x86_64.tar.gz"
+      sha256 "e7a9bd03810cecd4079761616315cb227a8e9b85a977d02b7be141439d267e7c"
     end
   end
 
