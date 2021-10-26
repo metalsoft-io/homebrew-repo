@@ -6,32 +6,43 @@ class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://metalsoft.io/"
   version "2.2.25"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Darwin_x86_64.tar.gz"
-      sha256 "1709105cd76caec66877a05d047d888ff8c7abdf0a6d1b704a45aa8a950b42c0"
-    end
     if Hardware::CPU.arm?
       url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Darwin_arm64.tar.gz"
-      sha256 "a6dcc29380daf94564cb4709a0e48c86c512110e088b13e48a0d9b81d72ba757"
+      sha256 "30630a2b82acc268291ecb5fdb98d5df95532815da038762ef0e3301265d5eaa"
+
+      def install
+        bin.install "metalcloud-cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Darwin_x86_64.tar.gz"
+      sha256 "d305e35037e32e965fa822547ed3877528ae91ccb49086aec43ba99faf5232e3"
+
+      def install
+        bin.install "metalcloud-cli"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Linux_arm64.tar.gz"
-      sha256 "3502ea019cedff4170a7abc0eb58f386468f0729e7d6d97800563a3efcf5ee25"
-    end
     if Hardware::CPU.intel?
       url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Linux_x86_64.tar.gz"
-      sha256 "e7a9bd03810cecd4079761616315cb227a8e9b85a977d02b7be141439d267e7c"
-    end
-  end
+      sha256 "05a135447a3bfd24c82a93b8caca727c4ffb82b01124a5224cce795a9331a653"
 
-  def install
-    bin.install "metalcloud-cli"
+      def install
+        bin.install "metalcloud-cli"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v2.2.25/metalcloud-cli_2.2.25_Linux_arm64.tar.gz"
+      sha256 "7743582c33fd11d77269f711f1b8917f31ec87d735acde0a5595a3995e43c231"
+
+      def install
+        bin.install "metalcloud-cli"
+      end
+    end
   end
 
   def caveats; <<~EOS
