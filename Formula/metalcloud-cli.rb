@@ -5,20 +5,20 @@
 class MetalcloudCli < Formula
   desc "Metalcloud's CLI"
   homepage "https://metalsoft.io/"
-  version "3.6.4"
+  version "3.6.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.4/metalcloud-cli_3.6.4_Darwin_x86_64.tar.gz"
-      sha256 "ed791bbd7ec135e698fbc33c9e187d7b840d462de221e41ada9f670414c00345"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.5/metalcloud-cli_3.6.5_Darwin_x86_64.tar.gz"
+      sha256 "831ca5435d724e0778971b4d67f47a6e726faf95598b1174412b6ea1da64a3f1"
 
       def install
         bin.install "metalcloud-cli"
       end
     end
     on_arm do
-      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.4/metalcloud-cli_3.6.4_Darwin_arm64.tar.gz"
-      sha256 "e71fd11b227d1888f18dcd4cac1319ee8266e82f8f5dc75e8bbbdca63284c06f"
+      url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.5/metalcloud-cli_3.6.5_Darwin_arm64.tar.gz"
+      sha256 "80720b10b754642d96e4a27e2f9b683d479614d83c421d57a4b8140c7d9f32a4"
 
       def install
         bin.install "metalcloud-cli"
@@ -29,8 +29,8 @@ class MetalcloudCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.4/metalcloud-cli_3.6.4_Linux_x86_64.tar.gz"
-        sha256 "2a9881a6fe2c9125c46ae9825784b70d8d614425345210a8edbb59d2b917cf35"
+        url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.5/metalcloud-cli_3.6.5_Linux_x86_64.tar.gz"
+        sha256 "34aebb809d1dc59b4c061119488409bd5e229c98bd3323b0eb2df4e2d420c751"
 
         def install
           bin.install "metalcloud-cli"
@@ -39,8 +39,8 @@ class MetalcloudCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.4/metalcloud-cli_3.6.4_Linux_arm64.tar.gz"
-        sha256 "14125b25d6bf2f5eba13bc2bfbdbfc80302a083ff98c9d135f89b51f441e2f0b"
+        url "https://github.com/metalsoft-io/metalcloud-cli/releases/download/v3.6.5/metalcloud-cli_3.6.5_Linux_arm64.tar.gz"
+        sha256 "7093b30141786b51921d6bc59fa123061291abd43a2a74b2041713ce9bedbea0"
 
         def install
           bin.install "metalcloud-cli"
